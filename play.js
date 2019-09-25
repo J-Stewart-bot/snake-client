@@ -1,8 +1,7 @@
 const net = require('net');
 
-/**
- * Establishes connection with the game server
- */
+
+// Establishes connection with the game server
 const connect = function() {
   const conn = net.createConnection({ 
     host: 'localhost',
@@ -10,9 +9,12 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
+  
+  // Handle a message from the server
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
+
   return conn;
 }
 
