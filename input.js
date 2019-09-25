@@ -11,6 +11,9 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(key) {
+  moves = 7;
+  delay = 50;
+  
   if (key === '\u0003') {
     process.exit();
   }
@@ -34,6 +37,34 @@ const handleUserInput = function(key) {
   }
   if (key === 'f') {
     connection.write('Say: !!!');
+  }
+  if (key === 'i') {
+    for (let i = 0; i < moves; i++) {
+      setTimeout(() => {
+        connection.write('Move: up');
+      }, i * delay);
+    }
+  }
+  if (key === 'k') {
+    for (let i = 0; i < moves; i++) {
+      setTimeout(() => {
+        connection.write('Move: down');
+      }, i * delay);
+    }
+  }
+  if (key === 'j') {
+    for (let i = 0; i < moves; i++) {
+      setTimeout(() => {
+        connection.write('Move: left');
+      }, i * delay);
+    }
+  }
+  if (key === 'l') {
+    for (let i = 0; i < moves; i++) {
+      setTimeout(() => {
+        connection.write('Move: right');
+      }, i * delay);
+    }
   }
 };
 
