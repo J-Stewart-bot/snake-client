@@ -14,7 +14,7 @@ const handleUserInput = function(key) {
   moves = 7;
   delay = 50;
   
-  if (key === '\u0003') {
+  if (key === 'p') {
     process.exit();
   }
   if (key === 'w') {
@@ -30,13 +30,13 @@ const handleUserInput = function(key) {
     connection.write('Move: right');
   }
   if (key === 'h') {
-    connection.write('Say: HI!');
+    connection.write('Say: Vroom Vroom!');
   }
   if (key === 'o') {
-    connection.write('Say: OMG');
+    connection.write('Say: !!!!!!!!!!!!!!!!!!!!');
   }
   if (key === 'f') {
-    connection.write('Say: !!!');
+    connection.write('Say: Im gonna get you');
   }
   if (key === 'i') {
     for (let i = 0; i < moves; i++) {
