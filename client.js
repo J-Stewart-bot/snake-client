@@ -3,7 +3,7 @@ const net = require('net');
 // Establishes connection with the game server
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost',//'localhost'
+    host: '192.168.43.44',//'localhost'
     port: 50541//50541
   });
 
