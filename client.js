@@ -3,9 +3,15 @@ const net = require('net');
 // Establishes connection with the game server
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost',
-    port: 50541
+    host: 'localhost',//'localhost'
+    port: 50541//50541
   });
+
+  // Upon connecting get verification you have connected
+  conn.on('connect', () => {
+    conn.write('Name: JT');
+  });
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   
